@@ -280,6 +280,9 @@ PRODUCT_PACKAGES += \
     MotoActions \
     MotoCommonOverlay
 
+# Moto Live Wallpapers 3
+$(call inherit-product, vendor/motorola/MotoLiveWallpaper3/motolivewallpaper3.mk)
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
