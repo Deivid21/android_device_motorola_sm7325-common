@@ -283,6 +283,9 @@ PRODUCT_PACKAGES += \
 # Moto Live Wallpapers 3
 $(call inherit-product, vendor/motorola/MotoLiveWallpaper3/motolivewallpaper3.mk)
 
+# Moto Time Weather
+$(call inherit-product, vendor/motorola/TimeWeather/timeweather.mk)
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
