@@ -4,7 +4,8 @@
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
 # libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
 # libmotext_inf, libril-qcril-hook-oem depend on libril, which is a gnu makefile target
-# libqti-perfd depends on libthermalclient, which is device specific
+# libqti-perfd, libgameoptfeature, thermal-engine depends on libthermalclient, which is device specific
+# libOmxVideoDSMode depends on libOmxCore, which is a gnu makefile target
 
 # ADSP
 vendor/bin/adsprpcd
@@ -280,8 +281,8 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
-vendor/lib/vendor.qti.diaghal@1.0.so
-vendor/lib64/vendor.qti.diaghal@1.0.so
+vendor/lib/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display - HDR
 vendor/etc/hdr_tm_config.xml
@@ -535,7 +536,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/video_system_specs.json
 vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
-vendor/lib/libmmosal.so
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor
 vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_basecodec.so
@@ -544,7 +545,7 @@ vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
 
 # Neural networks
 vendor/lib64/libQnnHtp.so
@@ -563,7 +564,7 @@ vendor/lib/libOmxDsdDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxG711Dec.so
 vendor/lib/libOmxQcelp13Dec.so
-vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libdsd2pcm.so
 vendor/lib64/libOmxAacDec.so
@@ -626,7 +627,7 @@ vendor/etc/lm/prekill/prekill_6GB.data
 vendor/etc/lm/sPLHFeature.xml
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
-vendor/lib64/libgameoptfeature.so
+vendor/lib64/libgameoptfeature.so;DISABLE_CHECKELF
 vendor/lib64/libgplaf.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
@@ -663,8 +664,8 @@ system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 
 # QCC - vendor
 vendor/lib64/libqcc_file_agent.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor
 
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
@@ -722,9 +723,9 @@ system_ext/lib64/vendor.qti.qspmhal@1.0.so
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy
-vendor/lib/vendor.qti.qspmhal@1.0.so
+vendor/lib/vendor.qti.qspmhal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
-vendor/lib64/vendor.qti.qspmhal@1.0.so
+vendor/lib64/vendor.qti.qspmhal@1.0.so;MODULE_SUFFIX=_vendor
 
 # QTI service tracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
@@ -1041,7 +1042,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal engine
-vendor/bin/thermal-engine
+vendor/bin/thermal-engine;DISABLE_CHECKELF
 vendor/etc/init/init_thermal-engine.rc
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
@@ -1245,6 +1246,6 @@ vendor/lib/libwfduibcsinkinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
+vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
