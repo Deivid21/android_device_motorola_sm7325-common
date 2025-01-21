@@ -167,7 +167,8 @@ PRODUCT_PACKAGES += \
     gnss@2.0-xtra-daemon.policy \
     libbatching \
     libgeofencing \
-    libgnss
+    libgnss \
+    libloc_socket
 
 PRODUCT_PACKAGES += \
     apdr.conf \
