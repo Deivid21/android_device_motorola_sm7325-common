@@ -187,6 +187,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# GApps
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
@@ -275,9 +279,6 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
-
-# MindTheGapps
- $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Moto hardware
 PRODUCT_PACKAGES += \
