@@ -276,6 +276,9 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
 
+# MindTheGapps
+ $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+
 # Moto hardware
 PRODUCT_PACKAGES += \
     MotoActions \
